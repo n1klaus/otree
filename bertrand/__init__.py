@@ -1,7 +1,6 @@
 from otree.api import *
 
 
-
 doc = """
 2 firms complete in a market by setting prices for homogenous goods.
 See "Kruse, J. B., Rassenti, S., Reynolds, S. S., & Smith, V. L. (1994).

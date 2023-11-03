@@ -1,7 +1,6 @@
 from otree.api import *
 
 
-
 doc = """
 This application provides a webpage instructing participants how to get paid.
 Examples are given for the lab and Amazon Mechanical Turk (AMT).

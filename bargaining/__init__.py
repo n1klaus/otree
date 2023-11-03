@@ -1,8 +1,6 @@
 from otree.api import *
 
 
-
-
 doc = """
 This bargaining game involves 2 players. Each demands for a portion of some
 available amount. If the sum of demands is no larger than the available

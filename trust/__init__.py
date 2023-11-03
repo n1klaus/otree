@@ -1,8 +1,6 @@
 from otree.api import *
 
 
-
-
 doc = """
 This is a standard 2-player trust game where the amount sent by player 1 gets
 tripled. The trust game was first proposed by
@@ -32,7 +30,8 @@ class Group(BaseGroup):
         doc="""Amount sent by P1""",
         label="Please enter an amount from 0 to 100:",
     )
-    sent_back_amount = models.CurrencyField(doc="""Amount sent back by P2""", min=cu(0))
+    sent_back_amount = models.CurrencyField(
+        doc="""Amount sent back by P2""", min=cu(0))
 
 
 class Player(BasePlayer):

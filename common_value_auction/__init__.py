@@ -61,7 +61,8 @@ def set_winner(group: Group):
 
     players = group.get_players()
     group.highest_bid = max([p.bid_amount for p in players])
-    players_with_highest_bid = [p for p in players if p.bid_amount == group.highest_bid]
+    players_with_highest_bid = [
+        p for p in players if p.bid_amount == group.highest_bid]
     winner = random.choice(
         players_with_highest_bid
     )  # if tie, winner is chosen at random

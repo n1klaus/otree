@@ -1,7 +1,6 @@
 from otree.api import *
 
 
-
 doc = """
 In Cournot competition, firms simultaneously decide the units of products to
 manufacture. The unit selling price depends on the total units produced. In
@@ -24,7 +23,8 @@ class Subsession(BaseSubsession):
 
 class Group(BaseGroup):
     unit_price = models.CurrencyField()
-    total_units = models.IntegerField(doc="""Total units produced by all players""")
+    total_units = models.IntegerField(
+        doc="""Total units produced by all players""")
 
 
 class Player(BasePlayer):

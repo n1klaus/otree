@@ -1,7 +1,6 @@
 from otree.api import *
 
 
-
 doc = """
 Each player decides if to free ride or to volunteer from which all will
 benefit.

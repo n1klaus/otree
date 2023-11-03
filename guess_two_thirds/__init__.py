@@ -40,7 +40,9 @@ def set_payoffs(group: Group):
     guesses = [p.guess for p in players]
     two_thirds_avg = (2 / 3) * sum(guesses) / len(players)
     group.two_thirds_avg = round(two_thirds_avg, 2)
-    group.best_guess = min(guesses, key=lambda guess: abs(guess - group.two_thirds_avg))
+    group.best_guess = min(
+        guesses, key=lambda guess: abs(
+            guess - group.two_thirds_avg))
     winners = [p for p in players if p.guess == group.best_guess]
     group.num_winners = len(winners)
     for p in winners:

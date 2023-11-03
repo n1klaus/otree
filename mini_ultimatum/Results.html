@@ -1,9 +1,32 @@
 {{ block title }}
-    Page title
+    Game Results
 {{ endblock }}
 
-{{ block content }}
 
+{{ block content }}
+    <table class="table">
+        <tr>
+            <td>Offer Amount:</td>
+            <td>{{ group.offer_amount }}</td>
+        </tr>
+        <tr>
+            <td>Offer Status:</td>
+            <td>{{ group.offer_accepted }}</td>
+        </tr>
+        <tr>
+            {{ if player.id_in_group == 3 }}
+                <td>
+                    <p>You {{ offer_status }} the offer from player 1</p>
+                </td>
+            {{ else }}
+                <td>Player Amount</td>
+                <td>
+                    {{ player.payoff }}
+                </td>
+            {{ endif }}
+        </tr>
+        
+    </table>
     {{ next_button }}
 {{ endblock }}
 

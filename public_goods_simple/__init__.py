@@ -1,7 +1,6 @@
 from otree.api import *
 
 
-
 class C(BaseConstants):
     NAME_IN_URL = 'public_goods_simple'
     PLAYERS_PER_GROUP = 3
