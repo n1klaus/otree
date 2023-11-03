@@ -1,0 +1,27 @@
+{{ block title }}
+    Survey Results
+{{ endblock }}
+
+{{ block content }}
+
+    <table class="table">
+        <tr>
+            <th>Question</td>
+            <th>Answer</td>
+        </tr>
+        <tr>
+            <td>What is the capital City of Kenya?</td>
+            <td>{{ player.capital_city }}</td>
+        </tr>
+        <tr>
+            <td>What is 14 + 15 ?</td>
+            <td>{{ player.sum_result }}</td>
+        </tr>
+        <tr>
+            <td>What is the population of Kenya?</td>
+            <td>{{ player.population }}</td>
+        </tr>
+    </table>
+{{ endblock }}
+
+
