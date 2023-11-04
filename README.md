@@ -9,12 +9,13 @@ pip3 install -U otree
 # Create project
 otree startproject app
 cd app
-# Run server
-otree devserver
 
 # Create application
 otree startapp mini_ultimatum
 otree startapp exit_survey
+
+# Run server
+otree devserver
 ```
 
 # Testing the application locally
