@@ -1,5 +1,7 @@
 from os import environ
+from dotenv import load_dotenv
 
+load_dotenv('.env')
 
 SESSION_CONFIGS = [
     dict(
@@ -42,7 +44,12 @@ ROOMS = [
 
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
-ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+OTREE_ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+
+OTREE_AUTH_LEVEL = environ.get('OTREE_AUTH_LEVEL')
+OTREE_PRODUCTION = int(environ.get('OTREE_PRODUCTION', 0))
+OTREE_REST_KEY = environ.get('OTREE_REST_KEY')
+DATABASE_URL = environ.get('DATABASE_URL')
 
 DEMO_PAGE_INTRO_HTML = """
 Here are some oTree games.
