@@ -10,7 +10,7 @@ then
 fi
 
 echo "Running autopep..."
-find ./mini_ultimatum ./exit_survey -type f -name '*.py' ! -path '*/__pycache__/*' ! -path "$VENV" -exec \
+find ./app/mini_ultimatum ./app/exit_survey -type f -name '*.py' ! -path '*/__pycache__/*' ! -path "$VENV" -exec \
     autopep8 --in-place --aggressive --recursive --verbose '{}' \;
 
 if [ ! "$(command -v pycodestyle)" ]
@@ -21,7 +21,7 @@ then
 fi
 
 echo -e "\n\nRunning pycodestyle..."
-find ./mini_ultimatum ./exit_survey -type f -name '*.py' ! -path '*/__pycache__/*' ! -path "$VENV" -exec pycodestyle --verbose '{}' \;
+find ./app/mini_ultimatum ./app/exit_survey -type f -name '*.py' ! -path '*/__pycache__/*' ! -path "$VENV" -exec pycodestyle --verbose '{}' \;
 
 echo -e "\nDone"
 exit

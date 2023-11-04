@@ -1,10 +1,11 @@
 {{ block title }}
-    Choose whether to punish player 1 or not
+    Page 2: Player 3 Chooses whether to punish Player 1 or not
 {{ endblock }}
 {{ block content }}
+    {{ include_sibling 'instructions.html' }}
     {# Player 3 chooses whether to punish player 1 or not #}
     
-    <button name="offer_accepted" value="True">Punish</button>
-    <button name="offer_accepted" value="False">Not punish</button>
+    <button name="offer_punished" value="True">Punish</button>
+    <button name="offer_punished" value="False">Not punish</button>
 
 {{ endblock }}

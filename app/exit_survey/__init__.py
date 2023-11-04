@@ -32,6 +32,7 @@ class Player(BasePlayer):
     )
     population = models.IntegerField(
         label='What is the population of Kenya?',
+        min=1,
         doc="The Population of Kenya",
     )
 
@@ -45,6 +46,13 @@ class GetCapitalCity(Page):
 class SumEquation(Page):
     form_model = 'player'
     form_fields = ['sum_result']
+
+    @staticmethod
+    def error_message(player: Player, values: dict):
+        # Validate the correct answer is provided
+        print('value is', values['sum_result'])
+        if values['sum_result'] != 29:
+            return 'Wrong answer. Please try again'
 
 
 class GetPopulation(Page):

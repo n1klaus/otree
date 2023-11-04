@@ -4,22 +4,23 @@
 
 
 {{ block content }}
+    {{ include_sibling 'instructions.html' }}
     <table class="table">
         <tr>
-            <td>Offer Amount:</td>
+            <td>Player 1 Offer Amount:</td>
             <td>{{ group.offer_amount }}</td>
         </tr>
         <tr>
-            <td>Offer Status:</td>
-            <td>{{ group.offer_accepted }}</td>
+            <td>Player 3 Decision:</td>
+            <td>{{ offer_status }}</td>
         </tr>
         <tr>
             {{ if player.id_in_group == 3 }}
-                <td>
+                <td colspan="2">
                     <p>You {{ offer_status }} the offer from player 1</p>
                 </td>
             {{ else }}
-                <td>Player Amount</td>
+                <td>Payout Amount</td>
                 <td>
                     {{ player.payoff }}
                 </td>

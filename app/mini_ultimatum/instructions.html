@@ -6,22 +6,35 @@
         Instructions
     </h3>
 
-    <p>
-        You are in a group of {{ C.PLAYERS_PER_GROUP }} people.
-        Each of you will be asked to choose a
-        number between 0 and {{ C.GUESS_MAX }}.
-        The winner will be the participant whose
-        number is closest to 2/3 of the
-        average of all chosen numbers.
-    </p>
+    <ol>
+        <li>
+            You are in a group of {{ C.PLAYERS_PER_GROUP }} people.
+            Player 1 is endowed with KSH 200 and 
+            will be asked to choose any amount
+            between KSH 0 and KSH 200 to send to Player 2.
+        </li>
+        <li>
+            Player 3 sees the amount that Player 1 has decided
+            to send to Player 2 and from this, 
+            he will decide to either Punish or Not Punish Player 1.
+        </li>
+        <li>
+            If Player 3 decides to punish the offer,
+            both Player 1 and Player 2 will not receive any payout.
+        </li>
+        <li>
+            If Player 3 decides not to punish the offer,
+            the payout for Player 1 will be KSH 200 - the offer amount
+            and Player 2 will receive the amount that Player 1 decided 
+            to send him.
+        </li>
+        <li>
+            Player 1 and Player 2 will be shown their payouts
+            in the results page.
+        </li>
+    </ol>
 
-    <p>
-        The winner will receive {{ C.JACKPOT }}.
-        In case of a tie, the {{ C.JACKPOT }}
-        will be equally divided among winners.
-    </p>
-
-    <p>This game will be played for {{ C.NUM_ROUNDS }} rounds.</p>
+    <p><em>This game will be played for {{ C.NUM_ROUNDS }} rounds.</em></p>
 
 </div>
 </div>
