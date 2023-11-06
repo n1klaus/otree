@@ -98,4 +98,11 @@ class Results(Page):
         )
 
 
+def creating_session(subsession: Subsession):
+    # Add labels to the participants
+    labels = ['Sender', 'Receiver', 'Punisher']
+    for player, label in zip(subsession.get_players(), labels):
+        player.participant.label = label
+
+
 page_sequence = [OfferStage, WaitForPlayer1, JudgeStage, WaitForJudge, Results]
